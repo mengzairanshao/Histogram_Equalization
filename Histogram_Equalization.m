@@ -39,5 +39,5 @@ subplot(3,2,4),imhist(resultPic),title('直方图均衡化后的图像直方图');
 x=0:255;
 subplot(3,2,5),stem(x,pixelValueStat/(M*N),'.'),title('原始图像各像素值在图像中所占比例'),xlabel('像素值'),ylabel('在图像中所占比例');
 subplot(3,2,6),stem(x,resultPixelValueStat/(M*N),'.'),title('直方图均衡化后的图像各像素值在图像中所占比例'),xlabel('像素值'),ylabel('在图像中所占比例');
-set(gcf,'unit','normalized','position',[0,0,1.0,1.0]);
-saveas(gcf,strcat(mfilename,'_pic'),'jpg');
+set(gcf,'unit','normalized','position',[0,0,1.0,1.0]);%[0,0,1.0,1.0]表示左下角为原点,长和宽分别占屏幕的100%
+saveas(gcf,strcat(mfilename,'_pic'),'jpg');           %以文件名加'_pic'为名保存文件
